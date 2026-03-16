@@ -39,10 +39,8 @@ public class EndStage extends Stage {
 
 
         Parent root = loader.load();
-        this.controller = loader.getController();
-
-
-        this.controller.setStats(levels, score);
+        EndStageController controller = loader.getController();
+        controller.setStats(levels, score);
 
 
         Scene scene = new Scene(root);
