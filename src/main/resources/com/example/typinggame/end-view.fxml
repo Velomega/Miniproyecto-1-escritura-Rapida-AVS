@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url('file:/C:/Users/alkomprar/IdeaProjects/Typing-game/src/main/resources/com/example/typinggame/imagenes/negro.jpg');" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.typinggame.controller.EndStageController">
+   <children>
+      <Pane prefHeight="200.0" prefWidth="629.0" style="-fx-background-color: rgba(0, 0, 0, 0.2);" />
+      <HBox prefHeight="324.0" prefWidth="444.0" style="-fx-background-color: rgba(33, 33, 33, 1);">
+         <StackPane.margin>
+            <Insets bottom="50.0" left="100.0" right="100.0" top="50.0" />
+         </StackPane.margin>
+         <children>
+            <ImageView fitHeight="302.0" fitWidth="180.0" pickOnBounds="true">
+               <image>
+                  <Image url="@imagenes/fin.png" />
+               </image>
+            </ImageView>
+            <VBox prefHeight="389.0" prefWidth="437.0">
+               <children>
+                  <Button mnemonicParsing="false" style="-fx-background-color: tranparent; -fx-border-color: red; -fx-border-radius: 5;" text="Fin de temporada" textFill="RED">
+                     <font>
+                        <Font name="Segoe UI" size="10.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@imagenes/btton_rojo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label text="Resumen de" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Segoe UI Black" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Temporada" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Black" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="-5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Estadisticas finales y redimiento" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Segoe UI" size="10.0" />
+                     </font>
+                  </Label>
+                  <Line endX="119.29289245605469" endY="-0.12361125648021698" startX="-100.0" stroke="WHITE">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Line>
+                  <HBox prefHeight="24.0" prefWidth="220.0">
+                     <children>
+                        <ImageView fitHeight="27.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@imagenes/check.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets bottom="2.0" left="10.0" top="2.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label prefHeight="30.0" prefWidth="119.0" text="Niveles completados" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="winsLabel" prefHeight="41.0" prefWidth="38.0" text="10/12" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Line endX="119.29289245605469" endY="-0.12361125648021698" startX="-100.0" stroke="WHITE">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Line>
+                  <HBox prefHeight="24.0" prefWidth="220.0">
+                     <children>
+                        <ImageView fitHeight="33.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@imagenes/medallas.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="8.0" top="2.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label prefHeight="30.0" prefWidth="73.0" text="Puntaje final" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="scoreLabel" prefHeight="41.0" prefWidth="38.0" text="10.890" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="55.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Line endX="119.29289245605469" endY="-0.12361125648021698" startX="-100.0" stroke="WHITE">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Line>
+                  <HBox alignment="CENTER" prefHeight="49.0" prefWidth="221.0">
+                     <children>
+                        <Button fx:id="btnRestart" mnemonicParsing="false" onAction="#onHandleRestart" style="-fx-background-color: red;" text="Reintentar" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@imagenes/reintentar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="btnMenu" mnemonicParsing="false" onAction="#onHandleMenu" style="-fx-background-color: (211, 211, 211, 0.5);" text="Menu">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@imagenes/house.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</StackPane>

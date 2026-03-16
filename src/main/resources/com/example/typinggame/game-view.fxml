@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url('file:/C:/Users/alkomprar/IdeaProjects/Typing-game/src/main/resources/com/example/typinggame/imagenes/negro-rojo.jpg');" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.typinggame.controller.GameController">
+   <children>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgba(0, 0, 0, 0.4);" />
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <HBox prefHeight="22.0" prefWidth="600.0" style="-fx-background-color: BLACK;">
+               <children>
+                  <ImageView fitHeight="92.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagenes/Favorite.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="60.0" prefWidth="84.0" text="TYPIST.PLIX">
+                     <textFill>
+                        <LinearGradient endX="0.9734849076379429" endY="0.9696969570535602">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.3310901749663526">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.515477792732167">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.6904441453566621">
+                                 <color>
+                                    <Color red="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <font>
+                        <Font name="Segoe UI Italic" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="-15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="scoreLabel" prefHeight="58.0" prefWidth="119.0" text="Puntaje: 1000">
+                     <font>
+                        <Font name="Segoe UI Italic" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="320.0" />
+                     </HBox.margin>
+                     <textFill>
+                        <LinearGradient endX="0.7840909682440036" endY="1.0" startX="0.09848484938794917">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.6446837146702554">
+                                 <color>
+                                    <Color red="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.8559892328398385">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="-30.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="487.0">
+               <children>
+                  <Label fx:id="seasonLabel" text="Temporada 1 |" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Black" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="chapterLabel" text="Episodio 1" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Black" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <Label fx:id="timeLabel" text="Tiempo: 20s" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="24.0" />
+               </font>
+               <effect>
+                  <Bloom />
+               </effect>
+            </Label>
+            <ProgressBar fx:id="timeBar" prefHeight="13.0" prefWidth="394.0" progress="0.8" style="-fx-accent: red;">
+               <VBox.margin>
+                  <Insets bottom="-20.0" top="20.0" />
+               </VBox.margin>
+            </ProgressBar>
+            <VBox alignment="CENTER" prefHeight="132.0" prefWidth="400.0" style="-fx-background-color: #2b2b2b; -fx-background-radius: 10; -fx-border-color: #3f3f3f; -fx-border-radius: 10;">
+               <VBox.margin>
+                  <Insets left="100.0" right="100.0" top="20.0" />
+               </VBox.margin>
+               <children>
+                  <Label fx:id="wordLabel" style="-fx-padding: 0;" text="Palabra" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: rgba(28, 27, 27, 1);">
+                     <children>
+                        <ImageView fitHeight="28.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@imagenes/teclado.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" top="16.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <TextField fx:id="wordTextField" onKeyPressed="#onHandleEnter" prefHeight="30.0" prefWidth="302.0" promptText="Escribe aqui" style="-fx-border-color: #ff3333; -fx-background-color: transparent; -fx-border-width: 2; -fx-border-radius: 10; -fx-padding: 5; -fx-text-fill: white;">
+                           <font>
+                              <Font name="Segoe UI" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="15.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextField>
+                        <ImageView fx:id="validationIcon" fitHeight="25.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@imagenes/luz_roja_mueve.gif" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" top="16.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="21.0" prefWidth="600.0">
+               <children>
+                  <Button fx:id="btnValidate" mnemonicParsing="false" onAction="#onValidateWord" style="-fx-background-color: red;" text="Confirmar escena" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@imagenes/claqueta.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="Segoe UI" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnRestart" mnemonicParsing="false" onAction="#onRestartGame" prefHeight="50.0" prefWidth="132.0" style="-fx-background-color: rgba(43, 33, 33, 0.8); -fx-border-color: rgba(255, 255, 255, 0.2); -fx-border-radius: 10;" text="Reiniciar" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

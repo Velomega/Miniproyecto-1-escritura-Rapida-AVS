@@ -1,0 +1,6 @@
+module:com.example.typinggame
+com.example.typinggame
+com.example.typinggame.controller
+com.example.typinggame.model
+com.example.typinggame.model.Interface
+com.example.typinggame.View

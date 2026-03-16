@@ -1,0 +1,40 @@
+package com.example.typinggame.View;
+
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.stage.Stage;
+import java.io.IOException;
+
+/**
+ * Custom Stage class that represents the Main Menu (Home) window of the application.
+ * It handles the loading of the FXML layout, sets the window properties,
+ * and initializes the application icon.
+ */
+public class HomeStage extends Stage {
+    /**
+     * Constructs a new HomeStage.
+     * It loads the FXML resource for the home view, configures the window title,
+     * adds a custom application icon, and makes the window non-resizable.
+     * * @throws IOException If the FXML file or the icon resource cannot be found or loaded.
+     */
+    public HomeStage() throws IOException {
+
+        Image icon = new Image(getClass().getResourceAsStream("/com/example/typinggame/imagenes/favorite.png"));
+
+
+        FXMLLoader loader = new FXMLLoader(
+                getClass().getResource("/com/example/typinggame/home-view.fxml")
+        );
+
+        Parent root = loader.load();
+        this.setResizable(false);
+        this.setTitle("Typing Game");
+        this.getIcons().add(icon);
+
+        Scene scene = new Scene(root);
+        setScene(scene);
+        show();
+    }
+}
