@@ -17,7 +17,7 @@ public class Main extends Application {
     /**
      * The main method is the standard entry point for the Java application.
      * It calls the {@code launch} method to start the JavaFX application lifecycle.
-     * * @param args Command-line arguments passed to the application.
+     * @param args Command-line arguments passed to the application.
      */
     public static void main(String[] args) {
         launch(args);

@@ -17,7 +17,7 @@ public class HomeStage extends Stage {
      * Constructs a new HomeStage.
      * It loads the FXML resource for the home view, configures the window title,
      * adds a custom application icon, and makes the window non-resizable.
-     * * @throws IOException If the FXML file or the icon resource cannot be found or loaded.
+     * @throws IOException If the FXML file or the icon resource cannot be found or loaded.
      */
     public HomeStage() throws IOException {
 
