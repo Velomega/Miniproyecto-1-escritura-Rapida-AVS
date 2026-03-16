@@ -109,6 +109,8 @@ public class GameController {
      * Handles transitions between correct/incorrect states and advances progress.
      */
     public void validate() {
+        btnValidate.setDisable(true);
+        wordTextField.setDisable(true);
         gameTimer.stop();
         String userWord = wordTextField.getText().trim();
         boolean isCorrect = userWord.equalsIgnoreCase(currentWord);
@@ -130,11 +132,14 @@ public class GameController {
                 resetIcon(null);
 
 
+                btnValidate.setDisable(false);
+                wordTextField.setDisable(false);
                 currentWord = wordList.wordsGenerator();
                 wordLabel.setText(currentWord);
 
                 time.restart(wordList.getCurrentLevel());
                 gameTimer.play();
+                wordTextField.requestFocus();
             });
             pause.play();
         } else {
@@ -206,7 +211,7 @@ public class GameController {
 
             if (newValue.intValue() <= 0) {
 
-                validate();
+                handleTimeout();
             }
         });
 
@@ -271,16 +276,27 @@ public class GameController {
      */
     private void handleTimeout() {
         gameTimer.stop();
-        wordLabel.setText("¡PERDISTE!");
+        wordLabel.setText("¡GAME OVER!");
         updateValidationImage(false);
+
+
+        wordTextField.setDisable(true);
+        btnValidate.setDisable(true);
 
         PauseTransition gameOverPause = new PauseTransition(Duration.seconds(2));
         gameOverPause.setOnFinished(e -> {
             try {
-                int finalLevel = ((wordList.getCurrentLevel() - 1) * 5) + ((Words) wordList).getWordsServedInLevel();
+
+                int currentSeason = wordList.getCurrentLevel();
+                int wordsInCurrentLevel = ((Words) wordList).getWordsServedInLevel();
+                int totalLevelsPassed = ((currentSeason - 1) * 5) + wordsInCurrentLevel;
+
+
+
                 int finalScore = score.getPoints();
 
-                new com.example.typinggame.View.EndStage(finalLevel, finalScore);
+
+                new com.example.typinggame.View.EndStage(totalLevelsPassed, finalScore);
 
                 javafx.stage.Stage currentStage = (javafx.stage.Stage) wordLabel.getScene().getWindow();
                 if (currentStage != null) currentStage.close();
